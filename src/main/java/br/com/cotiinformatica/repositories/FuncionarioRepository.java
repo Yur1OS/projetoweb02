@@ -23,7 +23,7 @@ public class FuncionarioRepository {
 		statement.setString(1, funcionario.getNome());
 		statement.setString(2, funcionario.getCpf());
 		statement.setString(3, funcionario.getMatricula());
-		statement.setDate(4, Date.valueOf(new SimpleDateFormat("yyyy-MM-dd").format(funcionario.getDataAdmissão())));
+		statement.setDate(4, Date.valueOf(new SimpleDateFormat("yyyy-MM-dd").format(funcionario.getDataAdmissao())));
 		statement.setInt(5, funcionario.getEmpresa().getIdEmpresa());
 		statement.execute();
 		
@@ -38,7 +38,7 @@ public class FuncionarioRepository {
 		statement.setString(1, funcionario.getNome());
 		statement.setString(2, funcionario.getCpf());
 		statement.setString(3, funcionario.getMatricula());
-		statement.setDate(4, Date.valueOf(new SimpleDateFormat("yyyy-MM-dd").format(funcionario.getDataAdmissão())));
+		statement.setDate(4, Date.valueOf(new SimpleDateFormat("yyyy-MM-dd").format(funcionario.getDataAdmissao())));
 		statement.setInt(5, funcionario.getEmpresa().getIdEmpresa());
 		statement.setInt(6, funcionario.getIdFuncionario());
 		statement.execute();
@@ -78,7 +78,7 @@ public class FuncionarioRepository {
 			funcionario.setNome(resultSet.getString("nome"));
 			funcionario.setCpf(resultSet.getString("cpf"));
 			funcionario.setMatricula(resultSet.getString("matricula"));
-			funcionario.setDataAdmissão(new SimpleDateFormat("yyyy-MM-dd").parse(resultSet.getString("dataAdmissao")));
+			funcionario.setDataAdmissao(new SimpleDateFormat("yyyy-MM-dd").parse(resultSet.getString("dataAdmissao")));
 			
 			funcionario.getEmpresa().setIdEmpresa(resultSet.getInt("idEmpresa"));
 			funcionario.getEmpresa().setNomeFantasia(resultSet.getString("nomeFantasia"));
@@ -114,7 +114,7 @@ public Funcionario findById(Integer idFuncionario ) throws Exception {
 			funcionario.setNome(resultSet.getString("nome"));
 			funcionario.setCpf(resultSet.getString("cpf"));
 			funcionario.setMatricula(resultSet.getString("matricula"));
-			funcionario.setDataAdmissão(new SimpleDateFormat("yyyy-MM-dd").parse(resultSet.getString("dataAdmissao")));
+			funcionario.setDataAdmissao(new SimpleDateFormat("yyyy-MM-dd").parse(resultSet.getString("dataAdmissao")));
 			
 			funcionario.getEmpresa().setIdEmpresa(resultSet.getInt("idEmpresa"));
 			funcionario.getEmpresa().setNomeFantasia(resultSet.getString("nomeFantasia"));

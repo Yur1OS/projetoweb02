@@ -33,7 +33,7 @@ public class FuncionariosController {
 			funcionario.setNome(dto.getNome());
 			funcionario.setCpf(dto.getCpf());
 			funcionario.setMatricula(dto.getMatricula());
-			funcionario.setDataAdmissão(new SimpleDateFormat("yyyy-MM-dd").parse(dto.getDataAdmissao()));
+			funcionario.setDataAdmissao(new SimpleDateFormat("yyyy-MM-dd").parse(dto.getDataAdmissao()));
 			funcionario.getEmpresa().setIdEmpresa(dto.getIdEmpresa());
 
 			FuncionarioRepository funcionarioRepository = new FuncionarioRepository();
@@ -58,7 +58,7 @@ public class FuncionariosController {
 			funcionario.setNome(dto.getNome());
 			funcionario.setCpf(dto.getCpf());
 			funcionario.setMatricula(dto.getMatricula());
-			funcionario.setDataAdmissão(new SimpleDateFormat("yyyy-MM-dd").parse(dto.getDataAdmissao()));
+			funcionario.setDataAdmissao(new SimpleDateFormat("yyyy-MM-dd").parse(dto.getDataAdmissao()));
 			funcionario.getEmpresa().setIdEmpresa(dto.getIdEmpresa());
 
 			FuncionarioRepository funcionarioRepository = new FuncionarioRepository();

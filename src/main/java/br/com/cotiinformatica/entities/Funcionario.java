@@ -19,7 +19,7 @@ public class Funcionario {
 	private String nome;
 	private String cpf;
 	private String matricula;
-	private Date dataAdmissão;
+	private Date dataAdmissao;
 	
 	private Empresa empresa;
 	

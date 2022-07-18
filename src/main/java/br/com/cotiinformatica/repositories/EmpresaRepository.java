@@ -31,10 +31,11 @@ public class EmpresaRepository {
 		Connection connection = ConnectionFactory.getConnection();
 		
 		PreparedStatement statement = connection.prepareStatement
-				("update empresa set nomeFantasia = ?, razaoSocial = ?, cnpj = ?");
+				("update empresa set nomeFantasia = ?, razaoSocial = ?, cnpj = ? where idEmpresa = ?");
 		statement.setString(1, empresa.getNomeFantasia());
 		statement.setString(2, empresa.getRazaoSocial());
 		statement.setString(3, empresa.getCnpj());
+		statement.setInt(4, empresa.getIdEmpresa());
 		statement.execute();
 	
 		connection.close();
